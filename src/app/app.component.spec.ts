@@ -8,4 +8,10 @@ describe('AppComponent', () => {
 
     expect(() => screen.getByRole('button')).not.toThrow();
   });
+
+  it('should get the button by text', async () => {
+    await render(AppComponent);
+
+    expect(() => screen.getByText('My button')).not.toThrow();
+  });
 });
